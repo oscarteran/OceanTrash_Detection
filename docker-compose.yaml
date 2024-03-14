@@ -1,0 +1,10 @@
+version: "3.8"
+
+services:
+  # MongoDB Service
+  mongo:
+    image: mongo:latest
+    ports:
+      - "27017:27017"  # You can change the port as per your preference
+    volumes:
+      - ./mongodb_data:/data/db  # Maps the data directory for persistence

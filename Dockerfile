@@ -9,14 +9,17 @@ WORKDIR /app
 # Copy content of application to container
 COPY ./app /app
 
-#copy requirements.txt files
+# Copy requirements.txt files
 COPY ./requirements.txt requirements.txt  
+
+# Update pip version
+RUN pip install --upgrade pip
 
 # Install dependecies of application
 RUN pip install -r requirements.txt
 
 # Expose port available in app
-EXPOSE 8080
+EXPOSE 10000
 
 # Command to execute app
-CMD [ "uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8080", "--reload"]
+CMD [ "uvicorn", "main:app", "--host", "0.0.0.0", "--port", "10000", "--reload"]

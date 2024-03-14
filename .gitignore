@@ -1,2 +1,4 @@
-venv/
-.idea
+env/
+.idea/
+logs/
+mongodb_data/
