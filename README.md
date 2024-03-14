@@ -1,2 +1,2 @@
-# Tadeobaby
-Proyecto
+# Wildlife Detection
+Project
